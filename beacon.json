@@ -1,0 +1,47 @@
+{
+  "schema": "fgpm.demo.visual-assembly/1",
+  "export": {
+    "id": "pkg:reference-world.landmark/assembly/beacon",
+    "semanticType": "visual.assembly/1",
+    "parts": [
+      {
+        "id": "base",
+        "mesh": "pkg:demo.primitives/mesh/body-cube",
+        "textureHook": "pkg:reference-world.landmark/appearance/beacon",
+        "translation": [
+          0,
+          0.5,
+          0
+        ]
+      },
+      {
+        "id": "shaft",
+        "mesh": "pkg:demo.primitives/mesh/body-cube",
+        "textureHook": "pkg:reference-world.landmark/appearance/beacon",
+        "translation": [
+          0,
+          1.5,
+          0
+        ]
+      },
+      {
+        "id": "light",
+        "mesh": "pkg:demo.primitives/mesh/head-cube",
+        "textureHook": "pkg:reference-world.landmark/appearance/beacon",
+        "translation": [
+          0,
+          2.7,
+          0
+        ]
+      }
+    ],
+    "hooks": [
+      {
+        "id": "pkg:reference-world.landmark/appearance/beacon",
+        "semanticType": "texture.runtime.rgba8-srgb/1",
+        "semanticRelation": "relation:demo.texture/base-colour-solid-to-runtime/1",
+        "default": "pkg:reference-world.landmark/texture/beacon-gold"
+      }
+    ]
+  }
+}

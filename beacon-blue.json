@@ -1,0 +1,12 @@
+{
+  "schema": "fgpm.demo.solid-colour/1",
+  "export": {
+    "id": "pkg:reference-world.landmark/texture/beacon-blue",
+    "semanticType": "texture.solid-colour/1",
+    "colour": [
+      45,
+      105,
+      220
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "format": "reference-world.landmark.maintenance/2",
+  "coordinate": "61d3e4c8-26dd-4d93-aa9b-2118f61031ba/reference-world.landmark",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "purpose": "Reference World demonstration worldspace and three-part beacon landmark with gold/blue appearance alternatives.",
+  "entrypoint": "fgpm-package.json",
+  "descriptor": {
+    "contributions": [
+      {
+        "id": "pkg:reference-world.landmark/world/demo",
+        "manifest": "world.json",
+        "manifestType": "fgpm.demo.worldspace/1"
+      },
+      {
+        "id": "pkg:reference-world.landmark/assembly/beacon",
+        "manifest": "beacon.json",
+        "manifestType": "fgpm.demo.visual-assembly/1"
+      },
+      {
+        "id": "pkg:reference-world.landmark/texture/beacon-gold",
+        "manifest": "beacon-gold.json",
+        "manifestType": "fgpm.demo.solid-colour/1"
+      },
+      {
+        "id": "pkg:reference-world.landmark/texture/beacon-blue",
+        "manifest": "beacon-blue.json",
+        "manifestType": "fgpm.demo.solid-colour/1"
+      }
+    ],
+    "dependencies": [
+      {
+        "package": "demo.worldspace",
+        "range": "^0.1.0"
+      },
+      {
+        "package": "demo.primitives",
+        "range": "^0.1.0"
+      },
+      {
+        "package": "demo.texture-vocabulary",
+        "range": "^0.3.0"
+      }
+    ],
+    "format": "fgpm.package/1",
+    "license": "CC0-1.0",
+    "name": "reference-world.landmark",
+    "namespace": "61d3e4c8-26dd-4d93-aa9b-2118f61031ba",
+    "replacements": [
+      {
+        "target": "pkg:reference-world.landmark/appearance/beacon",
+        "with": "pkg:reference-world.landmark/texture/beacon-gold"
+      },
+      {
+        "target": "pkg:reference-world.landmark/appearance/beacon",
+        "with": "pkg:reference-world.landmark/texture/beacon-blue"
+      },
+      {
+        "target": "pkg:demo.character/appearance/head/base-colour",
+        "with": "pkg:reference-world.landmark/texture/beacon-gold"
+      }
+    ],
+    "requires": [
+      {
+        "capability": "fgpm.handler.scene",
+        "range": "^1.0.0"
+      },
+      {
+        "capability": "fgpm.handler.texture",
+        "range": "^1.0.0"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "acceptedPredecessor": {
+    "coordinate": "reference-world.landmark@0.1.0",
+    "root": "sha256:d299bbbfd64fe2e4ea5e613cea4cea3885b8e1e04cd9ec9ea998ce3e67641dc5",
+    "entrypoint": "fpm-package.json",
+    "format": "fpm.package/1"
+  },
+  "cutover": {
+    "managerVersion": "0.11.0-rc.1",
+    "managerSourceCommit": "7100a9e546ed879de261d061af7f6248bc26220c",
+    "migrationMode": "finite copy-only pre-public migration plus owner active-label/documentation/test completion",
+    "versionDecision": "Retain 0.1.0: this is the initial public coordinate for a pre-public package, the finite public migrator preserves its semantic version, and gameplay/dependency behavior is unchanged. Exact predecessor and successor roots distinguish the immutable objects.",
+    "namespaceDecision": "Publisher-generated lower-case UUID 61d3e4c8-26dd-4d93-aa9b-2118f61031ba, issued once by the package maintainer and distinct from FGPM namespace.",
+    "nameDecision": "Retain immutable local name reference-world.landmark to preserve readable lineage."
+  },
+  "dependencyProviderPins": [
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.worldspace",
+      "version": "0.1.0",
+      "root": "sha256:e81d9fdf06aaa49ac878a28b5ac52c2b880ce89a17570d7f24aa769d85029165",
+      "relationship": "declared dependency"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.primitives",
+      "version": "0.1.0",
+      "root": "sha256:f9afd08ac72709a48a0c63f42f83da448fe9d91eecc027e2521dae1267fa64d2",
+      "relationship": "declared dependency and mesh contributions"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.texture-vocabulary",
+      "version": "0.3.0",
+      "root": "sha256:a03cf574b7e55dcf89b24aca70fcfa84ccb3db7d1e406a7ac03b1d6373dba5fd",
+      "relationship": "declared dependency and semantic relation steward"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.field",
+      "version": "0.1.0",
+      "root": "sha256:3ec3f1e4f350b6132ea710c1f955bcffa64fe36e2addaa384363d14cc5aaf87a",
+      "relationship": "world contribution reference via demo.worldspace"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.character",
+      "version": "0.1.0",
+      "root": "sha256:de5e333d02d424482f81a616cdfbbea781b6224b90bf0aedc5bed5841194cffe",
+      "relationship": "world contribution and external replacement target reference"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.camera",
+      "version": "0.1.0",
+      "root": "sha256:6c58993f5b86831045182247546b7ddca291ffc1b055600db2152eeaa7dca538",
+      "relationship": "world camera reference via demo.worldspace"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.scene-toolchain",
+      "version": "0.4.0",
+      "root": "sha256:ebf59847dfcc3f0138affabaa27e149ea1899bbf164522d0d4987f4cc4e9a929",
+      "relationship": "known Stage A provider for fgpm.handler.scene; selection remains external"
+    },
+    {
+      "coordinate": "6d7092e8-6f8a-4e25-bb6e-a0bf6588e5b4/demo.texture-toolchain",
+      "version": "0.3.1",
+      "root": "sha256:18c07076e1c7d6ce8204ee317a553799e0ddcd4a2885a435b1b9f25d83e90e81",
+      "relationship": "known Stage A provider for fgpm.handler.texture; selection remains external"
+    }
+  ],
+  "behavior": {
+    "worldInstances": [
+      "world:demo/field-1",
+      "world:demo/character-1",
+      "world:reference/beacon-1"
+    ],
+    "beaconTranslation": [
+      4,
+      0,
+      2
+    ],
+    "beaconParts": [
+      "base",
+      "shaft",
+      "light"
+    ],
+    "gold": [
+      255,
+      192,
+      48
+    ],
+    "blue": [
+      45,
+      105,
+      220
+    ],
+    "selection": "unselected from the maintained 32-package composition"
+  },
+  "tests": {
+    "path": "tests/check.mjs",
+    "execution": "Node built-ins; reads only; negative cases mutate memory only"
+  },
+  "licenseFile": "LICENSE.txt",
+  "provenanceFile": "PROVENANCE.md",
+  "ownerFile": "OWNER.json",
+  "limits": [
+    "Package validation is provisional fgpm.package/1, because v2 cannot represent requires/contributions/replacements.",
+    "Package import is inert and does not prove dependency availability or provider selection.",
+    "Package-local tests prove static relationship and behavior projections; full composition qualification belongs to FGRW after all owner successors are present.",
+    "Known provider roots are retained as evidence; this unselected package performs no workspace selection or activation."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "fgpm.demo.worldspace/1",
+  "export": {
+    "id": "pkg:reference-world.landmark/world/demo",
+    "semanticType": "worldspace.scene/1",
+    "instances": [
+      {
+        "id": "world:demo/field-1",
+        "definition": "pkg:demo.field/assembly/field",
+        "translation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "world:demo/character-1",
+        "definition": "pkg:demo.character/assembly/block-character",
+        "translation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "world:reference/beacon-1",
+        "definition": "pkg:reference-world.landmark/assembly/beacon",
+        "translation": [
+          4,
+          0,
+          2
+        ]
+      }
+    ],
+    "camera": "pkg:demo.camera/camera/fixed"
+  }
+}

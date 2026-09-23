@@ -1,0 +1,67 @@
+{
+  "contributions": [
+    {
+      "id": "pkg:reference-world.landmark/world/demo",
+      "manifest": "world.json",
+      "manifestType": "fgpm.demo.worldspace/1"
+    },
+    {
+      "id": "pkg:reference-world.landmark/assembly/beacon",
+      "manifest": "beacon.json",
+      "manifestType": "fgpm.demo.visual-assembly/1"
+    },
+    {
+      "id": "pkg:reference-world.landmark/texture/beacon-gold",
+      "manifest": "beacon-gold.json",
+      "manifestType": "fgpm.demo.solid-colour/1"
+    },
+    {
+      "id": "pkg:reference-world.landmark/texture/beacon-blue",
+      "manifest": "beacon-blue.json",
+      "manifestType": "fgpm.demo.solid-colour/1"
+    }
+  ],
+  "dependencies": [
+    {
+      "package": "demo.worldspace",
+      "range": "^0.1.0"
+    },
+    {
+      "package": "demo.primitives",
+      "range": "^0.1.0"
+    },
+    {
+      "package": "demo.texture-vocabulary",
+      "range": "^0.3.0"
+    }
+  ],
+  "format": "fgpm.package/1",
+  "license": "CC0-1.0",
+  "name": "reference-world.landmark",
+  "namespace": "61d3e4c8-26dd-4d93-aa9b-2118f61031ba",
+  "replacements": [
+    {
+      "target": "pkg:reference-world.landmark/appearance/beacon",
+      "with": "pkg:reference-world.landmark/texture/beacon-gold"
+    },
+    {
+      "target": "pkg:reference-world.landmark/appearance/beacon",
+      "with": "pkg:reference-world.landmark/texture/beacon-blue"
+    },
+    {
+      "target": "pkg:demo.character/appearance/head/base-colour",
+      "with": "pkg:reference-world.landmark/texture/beacon-gold"
+    }
+  ],
+  "requires": [
+    {
+      "capability": "fgpm.handler.scene",
+      "range": "^1.0.0"
+    },
+    {
+      "capability": "fgpm.handler.texture",
+      "range": "^1.0.0"
+    }
+  ],
+  "version": "0.1.0"
+}

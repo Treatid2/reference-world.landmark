@@ -1,0 +1,11 @@
+{
+  "schema": "reference-world.landmark.owner/1",
+  "coordinate": "61d3e4c8-26dd-4d93-aa9b-2118f61031ba/reference-world.landmark",
+  "packageName": "reference-world.landmark",
+  "publisherNamespace": "61d3e4c8-26dd-4d93-aa9b-2118f61031ba",
+  "accountableCustodian": "FGRW curator",
+  "implementationMaintainer": "Reference World Landmark maintainer",
+  "scope": "reference-world.landmark package source and package-local maintenance",
+  "permanentExclusiveOwnershipInferred": false,
+  "privateRoutingMetadataIncluded": false
+}
